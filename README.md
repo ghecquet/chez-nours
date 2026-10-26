@@ -8,7 +8,7 @@ Chez Nours is a cosy duplex in Cauterets, in the French Pyrenees. The current pa
 
 The site is static and deployed from the `main` branch with GitHub Pages through [the Pages workflow](.github/workflows/pages.yml). The custom domain is declared in [`CNAME`](CNAME).
 
-Public DNS should point the apex domain to GitHub Pages and `www` to the repository's GitHub Pages hostname. GitHub Pages must have **Enforce HTTPS** enabled. If Cloudflare proxies the domain, SSL/TLS mode should be **Full (strict)** and **Always Use HTTPS** should be enabled so HTTP requests redirect to HTTPS.
+Cloudflare DNS points the apex domain to GitHub Pages and `www` to the repository's GitHub Pages hostname. All web records are proxied through Cloudflare. SSL/TLS mode is **Full (strict)**, Cloudflare **Always Use HTTPS** is enabled, and GitHub Pages also has **Enforce HTTPS** enabled. Both the Cloudflare edge and GitHub origin use publicly trusted, automatically renewed TLS certificates.
 
 No credentials, account identifiers, private contact details, or deployment secrets belong in this repository.
 
