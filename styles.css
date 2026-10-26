@@ -134,12 +134,39 @@ footer {
 }
 
 @media (max-width: 760px) {
-  .page-shell { padding-top: 32px; }
+  .page-shell {
+    min-height: auto;
+    padding: 24px 20px 20px;
+  }
+
   .hero { grid-template-columns: 1fr; grid-template-rows: auto; text-align: center; }
-  .brand-artwork { grid-row: auto; width: min(78vw, 350px); margin: 0 auto 42px; }
-  .announcement { justify-self: center; padding: 32px 0 0; border-top: 1px solid var(--line); }
+
+  .brand-artwork {
+    grid-row: auto;
+    width: clamp(190px, 58vw, 250px);
+    margin: 0 auto 28px;
+  }
+
+  .announcement {
+    justify-self: center;
+    padding: 24px 0 0;
+    border-top: 1px solid var(--line);
+  }
+
+  h2 { font-size: clamp(1.85rem, 8vw, 2.35rem); }
+
   .intro { margin-inline: auto; }
-  .soon { justify-content: center; }
+
+  .soon {
+    justify-content: center;
+    margin-top: 22px;
+  }
+
+  footer {
+    min-height: 46px;
+    padding: 12px 20px;
+    font-size: 0.62rem;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
